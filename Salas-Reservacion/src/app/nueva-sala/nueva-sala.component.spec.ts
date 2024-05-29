@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { NuevaSalaComponent } from './nueva-sala.component';
+
+describe('NuevaSalaComponent', () => {
+  let component: NuevaSalaComponent;
+  let fixture: ComponentFixture<NuevaSalaComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [NuevaSalaComponent]
+    })
+    .compileComponents();
+    
+    fixture = TestBed.createComponent(NuevaSalaComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

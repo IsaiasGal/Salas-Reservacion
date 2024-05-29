@@ -1,0 +1,25 @@
+<div class="login">
+    <form class="form" method="post">
+      <h1>Inicia sesión</h1>
+      <div class="registrate">
+        <h4>Si no tienes un usuario registrate</h4>
+        <a routerLink="/registro">aquí</a>
+      </div>
+      <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Email"
+        required="required"
+      />
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="contraseña"
+        placeholder="Contraseña"
+        required="required"
+      />
+      <button type="submit"  (click)="onClickLogin()" >Log in</button>
+
+    </form>
+</div>

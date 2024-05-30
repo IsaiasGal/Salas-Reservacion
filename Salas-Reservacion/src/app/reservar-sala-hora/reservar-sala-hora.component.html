@@ -1,0 +1,84 @@
+<div class="container">
+  <p style="font-size: 24px;">{{FechaEscritada}}</p> 
+  <div class="row">
+    <div class="col-md-3">
+        <app-timepicker></app-timepicker>
+    </div>
+    <div class="col-md-3">
+        <app-timepicker></app-timepicker>
+    </div>
+    <div class="col-md-3">
+        <button type="button" class="btn btn-primary" >Obtener salas disponibles</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        Salas Disponibles
+    </div>
+    <div class="col-md-6">
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+    </div>
+    <div class="col-md-6 form-group">
+        <label>Razon porque se solicita la sala:</label>
+        <textarea class="form-control">
+        </textarea>
+    </div>
+    <div class="col-md-6 form-group">
+        <label>Numero de Asistentes:</label>
+        <input type="number" class="form-control">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <label for="">Solicitar lo siguiente</label>
+    </div>
+    <div class="form-group col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="checkProyector">
+        <label class="form-check-label" for="checkProyector">
+          Proyector
+        </label>
+      </div>
+      <div class="form-group col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="checkPantalla">
+        <label class="form-check-label" for="checkPantalla">
+          Pantalla
+        </label>
+      </div>
+      <div class="form-group col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="checkPizarra">
+        <label class="form-check-label" for="checkPizarra">
+          Pizarra
+        </label>
+      </div>
+      <div class="form-group col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="checkBocinas">
+        <label class="form-check-label" for="checkBocinas">
+          Bocinas
+        </label>
+      </div>
+      <div class="form-group col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="checkInternet">
+        <label class="form-check-label" for="checkInternet">
+          Internet
+        </label>
+      </div>
+      <div class="form-group col-md-3">
+        <input class="form-check-input" type="checkbox" value="" id="checkAperitivos">
+        <label class="form-check-label" for="checkAperitivos">
+          Mesa de aperitivos
+        </label>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9"></div>
+    <div class="col-md-3">
+        <button type="button" class="btn btn-primary">Reservar Sala</button>
+    </div>
+  </div>
+</div>
+

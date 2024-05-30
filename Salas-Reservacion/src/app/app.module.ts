@@ -10,10 +10,16 @@ import { NuevaSalaComponent } from './nueva-sala/nueva-sala.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { AgendarSalaComponent } from './agendar-sala/agendar-sala.component';
-import { CalendarioComponent } from './calendario/calendario.component';
-import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxCalendarModule } from 'igniteui-angular';
+import { IgxCalendarModule, IgxDialogModule } from 'igniteui-angular';
+import { CrudSalaComponent } from './crud-sala/crud-sala.component';
+import { ReservarSalaHoraComponent } from './reservar-sala-hora/reservar-sala-hora.component';
+import { NgbModule, NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { TimepickerComponent } from './timepicker/timepicker.component';
+import { JsonPipe } from '@angular/common';
+import axios from 'axios';
+import { HttpClientModule } from '@angular/common/http';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -23,8 +29,9 @@ import { IgxCalendarModule } from 'igniteui-angular';
     InicioComponent,
     NuevaSalaComponent,
     AgendarSalaComponent,
-    CalendarioComponent,
-    PerfilUsuarioComponent
+    CrudSalaComponent,
+    ReservarSalaHoraComponent,
+    TimepickerComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +41,16 @@ import { IgxCalendarModule } from 'igniteui-angular';
     MatCardModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    IgxCalendarModule
+    IgxCalendarModule,
+    IgxDialogModule,
+    NgbModule,
+    NgbTimepickerModule,
+    JsonPipe,
+    HttpClientModule  
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

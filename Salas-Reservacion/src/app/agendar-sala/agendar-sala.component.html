@@ -1,33 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-    <header>
-        <nav style="padding:25px;" class="navbar navbar-expand-lg ">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" routerLink = "/inicio">Inicio</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Salas
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" routerLink="/nueva">Nueva sala</a>
-                    <a class="dropdown-item" routerLink="/agendar">Agendar sala</a>
-                    <a class="dropdown-item" routerLink="/calendario">Calendario</a>
-                  </div>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" routerLink="/perfil">Perfil de usuario</a>
-                  </li>
-                
-              </ul>
-            </div>
-          </nav>
-    </header> 
-<body>
-    <article class="calendar-wrapper">
-        <igx-calendar class="igx"></igx-calendar>
-    </article>
-</body>
-</html>
+<div class="container"> 
+  <div class="row"> 
+      <div class="mx-auto" style="width: 400px"> 
+          <article class="calendar-wrapper" *ngIf="!isDateSeleccionada" >
+              <igx-calendar selection="multi" [showWeekNumbers]="true"
+                (selected)="onDateSelected($event)"
+              ></igx-calendar>
+          </article>
+      </div>
+  </div>          
+  <app-reservar-sala-hora [fecha]="fechaSeleccionada" *ngIf="isDateSeleccionada"></app-reservar-sala-hora>
+</div>
